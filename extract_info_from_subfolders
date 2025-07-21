@@ -112,7 +112,7 @@ for folder in subfolders:
                         format="%(asctime)s - %(levelname)s - %(message)s")
 
     # ==================== UNIVERSITIES, REGIONS AND TYPES DICTIONARIES ====================
-    # Mapping "base" per cercare il nome (in inglese)
+    # Mapping "base" to search the institution name
     UNI_MAPPING = {
         # Group 1: Northern Universities
         "University of Padua": "Università di Padova",
@@ -554,7 +554,7 @@ for folder in subfolders:
                 italian_univ, role = first_univ, "First"
 
             key_univ = last_univ or first_univ
-            # ===== CHECK QUI =====
+            # ===== HERE CHECKS THE AFFILIATION REGION =====
             region = UNI_REGION.get(key_univ)
             if region is None or region not in agg_region_data:
                 print(f"ℹ️ File {file.name} row {i}: region not detected for '{key_univ}'; skip.")
