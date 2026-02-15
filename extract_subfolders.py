@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May  6 11:49:19 2025
-
-@author: franc
-"""
-
 import os
 import time
 import logging
@@ -75,7 +68,7 @@ mother_folder = r"G:\Drive condivisi\fair index paper SCoSC\science of science\\
 data_folder = mother_folder + "dati\\Dipartimento Fisiologia\\"         #enter the appropriate folder storing your data
 
 #folder for analysis results
-results_folder = mother_folder + "risultati\\new_attempt\\"              #enter the appropriate folder set to store your results
+results_folder = mother_folder + "risultati\\prova finale\\"              #enter the appropriate folder set to store your results
 
 subfolders = [name for name in os.listdir(data_folder)
                   if os.path.isdir(os.path.join(data_folder, name))]
@@ -385,7 +378,8 @@ for folder in subfolders:
         "G d'Annunzio University of Chieti-Pescara": "public",
         "University of Molise": "public",
         "Universita degli Studi di Bari Aldo Moro": "public",
-        "University of Foggia, Politecnico di Bari": "public",
+        "University of Foggia": "public", 
+        "Politecnico di Bari": "public",
         "University of Salento": "public",
         "Universita Mediterranea di Reggio Calabria": "public",
         "University of Calabria": "public",
@@ -660,7 +654,8 @@ for folder in subfolders:
     index_values = df_all["Index"].dropna()
     index_values_list = index_values.tolist()
     if len(index_values_list) > 0 :
-       mean_index = sum(index_values_list) / len(index_values_list)
+       # mean_index = sum(index_values_list) / len(index_values_list)
+       mean_index = statistics.mean(index_values_list) 
        std_deviation = statistics.stdev(index_values_list)
     else:
        mean_index = 'nan'
