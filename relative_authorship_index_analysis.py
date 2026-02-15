@@ -356,7 +356,8 @@ UNI_TYPE = {
     "G d'Annunzio University of Chieti-Pescara": "public",
     "University of Molise": "public",
     "Universita degli Studi di Bari Aldo Moro": "public",
-    "University of Foggia, Politecnico di Bari": "public",
+    "University of Foggia": "public", 
+    "Politecnico di Bari": "public",
     "University of Salento": "public",
     "Universita Mediterranea di Reggio Calabria": "public",
     "University of Calabria": "public",
@@ -656,5 +657,6 @@ print(f"✅ Excel File for Public institutions saved in: {pub_output_path}")
 print(f"✅ Excel File for Private institutions saved in: {priv_output_path}")
 print(f"✅ Excel File for Non-Telematic institutions saved in: {nontele_output_path}")
 print(f"✅ Excel File for Telematic institutions saved in: {tele_output_path}")
+
 
 
